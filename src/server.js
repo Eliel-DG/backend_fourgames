@@ -1,6 +1,5 @@
-// app.js or index.js
-
 import express from 'express';
+import cors from 'cors'; // Importa el paquete cors
 import dbConnection from './config/db.js';
 import { router as gamesRouter } from './routes/gamesRoute.js';
 import { router as userRouter } from './routes/userRoute.js';
@@ -8,6 +7,7 @@ import { router as userRouter } from './routes/userRoute.js';
 const api = express();
 const port = 18061;
 
+api.use(cors()); // Agrega el middleware cors
 api.use(express.json());
 
 try {
@@ -22,8 +22,8 @@ try {
     console.error(error);
 }
 
-api.use('/games', gamesRouter); 
-api.use('/users', userRouter); 
+api.use('/games', gamesRouter);
+api.use('/users', userRouter);
 
 api.listen(port, () => {
     console.log(`API started on http://localhost:${port}`);
