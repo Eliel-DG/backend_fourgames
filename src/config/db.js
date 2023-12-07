@@ -1,4 +1,4 @@
-/* import { Sequelize } from "sequelize";
+/*import { Sequelize } from "sequelize";
 import dotenv from "dotenv";
 
 dotenv.config({ path: "src/.env" });
@@ -15,9 +15,9 @@ const dbConnection = new Sequelize(
 )
 
 export default dbConnection; 
+*/
 
-
- */
+ 
 import { Sequelize } from "sequelize";
 import dotenv from "dotenv";
 
