@@ -7,7 +7,7 @@ const Requirements = dbConnection.define('Requirements', {
     type: DataTypes.STRING,
     allowNull: false,
   },
-  descripcion: {
+  requisitos: {
     type: DataTypes.TEXT,
     allowNull: false,
   },

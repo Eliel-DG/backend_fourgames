@@ -3,11 +3,11 @@ import Requirements from '../models/requirements.js';
 
 const createRequirements = async (req, res) => {
   try {
-    const { titulo, descripcion, gameId , imagen} = req.body;
+    const { titulo, requisitos, gameId , imagen} = req.body;
 
     const newRequirements = await Requirements.create({
       titulo,
-      descripcion,
+      requisitos,
       gameId,
       imagen
     });
@@ -32,7 +32,7 @@ const getAllRequirements = async (req, res) => {
 const updateRequirementsByID = async (req, res) => {
   try {
     const requirementID = req.params.requirementID;
-    const { titulo, descripcion, gameId, imagen } = req.body;
+    const { titulo, requisitos, gameId, imagen } = req.body;
 
     const requirementToUpdate = await Requirements.findByPk(requirementID);
 
@@ -42,7 +42,7 @@ const updateRequirementsByID = async (req, res) => {
 
     await requirementToUpdate.update({
       titulo,
-      descripcion,
+      requisitos,
       gameId,
       imagen
     });
