@@ -15,6 +15,7 @@ const dbConnection = new Sequelize(
 )
 
 export default dbConnection; 
+
 */
 
 
